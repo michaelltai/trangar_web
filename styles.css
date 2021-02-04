@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+body {
+  background: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Heading */
+
+h1 {
+  font-size: 1.5em;
+  padding: 20px 0 0 20px;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+span {
+  border: 2px solid black;
+  padding: 10px;
+  font-weight: 700;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Layout Styling */
+#content-wrap {
+  display: inline-flex;
+  margin: 40px 0 0 200px;
+}
+
+.line {
+  display: flex;
+  float: right;
+  border-left: 3px solid black;
+  height: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+/* Button Styles */
+#button-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid black;
+  margin: 20px 0px 0px 0px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 slidein;
+}
+
+.button:active {
+  border: 2px solid black;
+  color: black;
+}
+
+.icon-button {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  margin: 20px 0px 0px 0px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  animation: 1s ease-out 0s 1 slidein;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(500%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Home Button */
+
+#home-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#home-button a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+#home-button:hover #spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: black;
+  transform: rotate(80deg);
+}
+
+#home-button:hover a {
+  color: white;
+}
+
+/* Portfolio Button */
+
+#portfolio-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#portfolio-button a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+#portfolio-button:hover #circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+#portfolio-button:hover a {
+  color: white;
+}
+
+/* GitHub Button */
+
+#git {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#git a {
+  position: relative;
+  left: 0;
+  transition: all 0.35s ease-Out;
+}
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: #bfc0c0;
+  left: -200px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}
+
+#git img {
+  width: 20px;
+  height: auto;
+}
+
+#git:hover #dub-arrow {
+  left: 0;
+}
+
+#git:hover a {
+  left: 150px;
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  #container {
+    width: 50%;
+  }
+}
+
+/* Welcome Text */
+
+#welcome-logo {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 430px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+#welcome {
+  float: right;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
+  width: 700px;
+  margin-left: 50px;
+  border: 3px solid black;
+  padding: 20px;
+}
+
+#portfolio {
+  position: absolute;
+  width: 700px;
+  margin-left: 250px;
+  border: 3px solid black;
+  padding: 20px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#icon-header {
+  display: inline-flex;
+  justify-content: space-between;
+}
